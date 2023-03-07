@@ -16,7 +16,7 @@ headers = {
            'Content-Type': "application/x-www-form-urlencoded"
            }
 
-humidity, temperature = Adafruit_DHT.read_retry(11, 4)
+humidity, temperature = Adafruit_DHT.read_retry(22, 4)
 
 # Convert degrees Celsius to Fahrenheit
 temperature = temperature * 9/5.0 + 32
