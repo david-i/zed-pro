@@ -34,7 +34,7 @@ $ crontab -e
 #
 # m h  dom mon dow   command
 
-*/10 * * * * /home/pi/Documents/dht11.py > /dev/null 2>&1
+*/10 * * * * /home/pi/Documents/dhtxx.py > /dev/null 2>&1
 * 21 * * * /home/pi/Documents/ping_ecobee.sh >> /home/pi/Documents/ping.out 2>&1
 
 @reboot /home/pi/Documents/start_rtlsdr.sh
