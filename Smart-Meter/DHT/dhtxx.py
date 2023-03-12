@@ -18,7 +18,12 @@ headers = {
 
 humidity, temperature = Adafruit_DHT.read_retry(22, 4)
 
-# Convert degrees Celsius to Fahrenheit
+# Filter out humidity values greater than 100.0%
+if humidity > 100.0:
+    print("humidity value exceeds 100%\n")
+    humidity = 0
+
+# Convert temperature degrees Celsius to Fahrenheit
 temperature = temperature * 9/5.0 + 32
 
 payload_h = "value=" + str(humidity)
